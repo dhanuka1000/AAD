@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample HTML page</title>
+
+</head>
+<body>
+
+
+<h1>Welcome to the sample web page</h1>
+
+<p>This is sample web page document</p>
+
+<div id="content"></div>
+
+<!--<button id="btn">click me</button>-->
+
+<button id="btn_ajax">click me</button>
+<button id="btn_ajax_post">Post</button>
+<button id="btn_ajax_get">Get</button>
+<button id="btn_ajax_put">Put</button>
+<button id="btn_ajax_delete">Delete</button>
+
+
+<script src="jquery-3.7.1.min.js"></script>
+
+<script>
+
+    //synchronous
+
+    // console.log("start");
+    // console.log("Middle");
+    // console.log("end");
+    //
+    // //asynchronous
+    //
+    // console.log("start");
+    // setTimeout(function (){
+    //     console.log("Middle");
+    // },2000);
+    // console.log("end");
+
+    // $('#btn').click(function (){
+    //
+    //     // var http = new XMLHttpRequest();
+    //     // http.open('GET', 'https://jsonplaceholder.typicode.com/posts');
+    //     // http.send();
+    //     // http.onreadystatechange = function (){
+    //     //     if (http.readyState===4){
+    //     //         console.log(http.responseText);
+    //     //
+    //     //         var data = JSON.parse(http.responseText);
+    //     //
+    //     //         for (var i = 0; i<data.length; i++){
+    //     //             console.log(data[i]);
+    //     //             $('#content').append('<h3>' + data[i].title + '</h3><p>'+data[i].body+'</p>');
+    //     //         }
+    //     //     }
+    //     // }
+    // });
+
+    // $('#btn_ajax').click(function (){
+    //
+    //     console.log("start");
+    //
+    //     $.ajax({
+    //         url:'http://localhost:8080/Day_01_war_exploded/hello',
+    //         method:'GET',
+    //         async: false,
+    //
+    //         success:function (response){
+    //             console.log(response);
+    //         },
+    //         error:function (){
+    //             console.log('Error');
+    //         }
+    //     })
+    //     console.log("End");
+    // });
+
+    $('#btn_ajax_get').click(function (){
+
+        console.log("start");
+
+        $.ajax({
+            url:'http://localhost:8080/Day_01_war_exploded/hello',
+            method:'GET',
+            async: false,
+
+            success:function (response){
+                console.log(response);
+            },
+            error:function (){
+                console.log('Error');
+            }
+        })
+        console.log("End");
+    });
+
+    $('#btn_ajax_put').click(function (){
+
+        console.log("start");
+
+        $.ajax({
+            url:'http://localhost:8080/Day_01_war_exploded/hello',
+            method:'PUT',
+            async: false,
+
+            success:function (response){
+                console.log(response);
+            },
+            error:function (){
+                console.log('Error');
+            }
+        })
+        console.log("End");
+    });
+
+    $('#btn_ajax_delete').click(function (){
+
+        console.log("start");
+
+        $.ajax({
+            url:'http://localhost:8080/Day_01_war_exploded/hello',
+            method:'DELETE',
+            async: false,
+
+            success:function (response){
+                console.log(response);
+            },
+            error:function (){
+                console.log('Error');
+            }
+        })
+        console.log("End");
+    });
+
+    $('#btn_ajax_post').click(function (){
+
+        console.log("start");
+
+        $.ajax({
+            url:'http://localhost:8080/Day_01_war_exploded/hello',
+            method:'POST',
+            async: false,
+
+            success:function (response){
+                console.log(response);
+            },
+            error:function (){
+                console.log('Error');
+            }
+        })
+        console.log("End");
+    });
+</script>
+
+
+
+</body>
+</html>
